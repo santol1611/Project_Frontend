@@ -1,0 +1,44 @@
+$theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
+
+$utilities-bg: map-merge(
+  $utilities-colors,
+  (
+    "black": to-rgb($black),
+    "white": to-rgb($white),
+    "body": to-rgb($body-bg)
+  )
+);
+$utilities-bg-colors: map-loop($utilities-bg, rgba-css-var, "$key", "bg");
+
+$utilities-bg-subtle: (
+  "primary-subtle": var(--#{$prefix}primary-bg-subtle),
+  "secondary-subtle": var(--#{$prefix}secondary-bg-subtle),
+  "success-subtle": var(--#{$prefix}success-bg-subtle),
+  "info-subtle": var(--#{$prefix}info-bg-subtle),
+  "warning-subtle": var(--#{$prefix}warning-bg-subtle),
+  "danger-subtle": var(--#{$prefix}danger-bg-subtle),
+  "light-subtle": var(--#{$prefix}light-bg-subtle),
+  "dark-subtle": var(--#{$prefix}dark-bg-subtle)
+);
+
+$theme-colors-bg-subtle: (
+  "primary": $primary-bg-subtle,
+  "secondary": $secondary-bg-subtle,
+  "success": $success-bg-subtle,
+  "info": $info-bg-subtle,
+  "warning": $warning-bg-subtle,
+  "danger": $danger-bg-subtle,
+  "light": $light-bg-subtle,
+  "dark": $dark-bg-subtle,
+);
+
+$theme-colors-bg-subtle-dark: (
+  "primary": $primary-bg-subtle-dark,
+  "secondary": $secondary-bg-subtle-dark,
+  "success": $success-bg-subtle-dark,
+  "info": $info-bg-subtle-dark,
+  "warning": $warning-bg-subtle-dark,
+  "danger": $danger-bg-subtle-dark,
+  "light": $light-bg-subtle-dark,
+  "dark": $dark-bg-subtle-dark,
+);
